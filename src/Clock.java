@@ -3,13 +3,17 @@ public class Clock {
 
     public static void main(String[] args) {
 
-        int secondNow = elapsedTime(18, 32, 47);
-        System.out.println("現在の経過時間は" + secondNow + "秒となります");
+        int hour = 18;
+        int minute = 32;
+        int second = 47;
+
+        int elapsedSeconds = getSecond(hour, minute, second);
+        System.out.println("現在の経過時間は" + elapsedSeconds + "秒となります");
 
     }
 
     //int型３つの引数から１日の経過時間を計算するelapsedTimeメソッド
-    public static int elapsedTime(int hour, int minute, int second) {
+    public static int getSecond(int hour, int minute, int second) {
 
         // 経過時を秒数に変換する
         int second1 = hour * 60 *60;
